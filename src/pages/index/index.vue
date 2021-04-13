@@ -48,11 +48,11 @@
             <div class="alert_bd">
                 <h4>请选择学期</h4> 
                 <ul class="screen_box">
-                    <li v-for="(item,idx) in termArr" :class="{ on: termAct[idx] }" @click="termFun(idx)">{{item}}</li>
+                    <li v-for="(item,idx) in termArr" :class="{ on: termAct[idx] }" :key="idx" @click="termFun(idx)">{{item}}</li>
                 </ul>
                 <h4>请选择年级</h4>
                 <ul class="screen_box">
-                    <li v-for="(item,idx) in gradeArr" :class="{ on: gradeAct[idx] }" @click="gradeFun(idx)">{{item}}</li>
+                    <li v-for="(item,idx) in gradeArr" :class="{ on: gradeAct[idx] }" :key="idx" @click="gradeFun(idx)">{{item}}</li>
                 </ul>
             </div>
         </div>
